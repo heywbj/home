@@ -23,6 +23,8 @@ filetype plugin indent on
 
 " Show trailing whitepace and spaces before a tab:
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+
 
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2 
 autocmd FileType htmldjango setlocal shiftwidth=2 softtabstop=2 
