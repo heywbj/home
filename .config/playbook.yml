@@ -32,3 +32,8 @@
         - virtualenv
         - virtualenvwrapper
         - flake8
+
+    - name: install modules from node
+      npm: name={{ item }} global=yes
+      with_items:
+        - jshint
