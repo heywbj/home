@@ -16,7 +16,7 @@
         - deb-src https://deb.nodesource.com/node {{ ansible_lsb.codename }} main
 
     - name: install packages from apt
-      apt: name={{ item }} 
+      apt: name={{ item }}
       with_items:
         - python-pip
         - nodejs
