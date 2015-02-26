@@ -1,3 +1,5 @@
+TZ='America/New_York'; export TZ
+
 export PROJECT_HOME=$HOME/projects
 export EDITOR=/usr/bin/vim
 source `which virtualenvwrapper.sh`

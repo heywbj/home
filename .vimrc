@@ -21,18 +21,18 @@ syntax on
 filetype plugin on
 execute pathogen#infect()
 
-" html
-autocmd FileType html call SetupHTML()
-autocmd FileType htmldjango call SetupHTML()
 
-function SetupHTML()
+function SetupWebstuff()
     setlocal shiftwidth=2
     setlocal softtabstop=2
     map <buffer> <F7> :call JSHint()<CR>
 endfunction
 
-"javascript
-autocmd FileType javascript call SetupJavascript()
+" javascript/css/html
+autocmd FileType html call SetupWebstuff()
+autocmd FileType htmldjango call SetupWebstuff()
+autocmd FileType javascript call SetupWebstuff()
+autocmd FileType css call SetupWebstuff()
 
 set errorformat+=%f:\ line\ %l\\,\ col\ %c\\,\ %m
 set errorformat+=%f:\ line\ %l\\,\ col\ NaN\\,\ %m
@@ -43,10 +43,6 @@ function JSHint()
     else
         cexpr system('jshint ' . expand('%'))
     endif
-endfunction
-
-function SetupJavascript()
-    call SetupHTML()
 endfunction
 
 " Show trailing whitepace
