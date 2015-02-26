@@ -1,0 +1,12 @@
+{ "laxcomma": true 
+, "strict": true
+, "curly": true
+, "asi": true
+, "quotmark": "single"
+, "unused": true
+, "undef": true
+, "eqeqeq": true
+, "funcscope": true
+, "immed": true
+, "latedef": true
+}

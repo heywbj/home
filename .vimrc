@@ -12,14 +12,24 @@ set tabstop=8
 set softtabstop=4
 set textwidth=79
 set colorcolumn=+1
-
+set autoindent
 
 colo desert
 nnoremap gp `[v`]
 
 syntax on
-filetype plugin indent on
+filetype plugin on
 execute pathogen#infect()
+
+" html
+autocmd FileType html call SetupHTML()
+autocmd FileType htmldjango call SetupHTML()
+
+function SetupHTML()
+    setlocal shiftwidth=2
+    setlocal softtabstop=2
+    map <buffer> <F7> :call JSHint()<CR>
+endfunction
 
 "javascript
 autocmd FileType javascript call SetupJavascript()
@@ -36,27 +46,9 @@ function JSHint()
 endfunction
 
 function SetupJavascript()
-    setlocal shiftwidth=2
-    setlocal softtabstop=2
-    autocmd BufWritePost *.js call JSHint()
+    call SetupHTML()
 endfunction
-
-" html
-autocmd FileType html call SetupHTML()
-autocmd FileType htmldjango call SetupHTML()
-
-function SetupHTML()
-    setlocal shiftwidth=2
-    setlocal softtabstop=2
-    setlocal textwidth=160
-    map <buffer> <F7> :call JSHint()<CR>
-endfunction
-
-" Run flake8 on save
-autocmd FileType python autocmd BufWritePost *.py call Flake8()
 
 " Show trailing whitepace
 highlight TrailingWhitespace ctermbg=darkgreen guibg=darkgreen
 autocmd Syntax * syn match TrailingWhitespace /\s\+$/ containedin=ALL
-
-
