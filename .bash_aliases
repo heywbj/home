@@ -2,6 +2,7 @@ TZ='America/New_York'; export TZ
 
 export PROJECT_HOME=$HOME/projects
 export EDITOR=/usr/bin/vim
+export PATH=$PATH:./node_modules/.bin
 source `which virtualenvwrapper.sh`
  
 alias ls='ls -F --color'
