@@ -10,8 +10,8 @@ set expandtab
 set shiftwidth=4
 set tabstop=8
 set softtabstop=4
-set textwidth=79
-set colorcolumn=+1
+" set textwidth=79
+set colorcolumn=80
 set autoindent
 
 colo desert
