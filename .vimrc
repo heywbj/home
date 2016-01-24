@@ -1,6 +1,5 @@
 " general settings
 set autoindent
-set textwidth=79
 set ignorecase
 set incsearch
 set hlsearch
@@ -10,7 +9,7 @@ set hidden
 " display settings
 set number
 set background=dark
-set colorcolumn=+1
+set colorcolumn=80
 colo desert
 nnoremap gp `[v`]
 
