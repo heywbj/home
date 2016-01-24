@@ -7,7 +7,6 @@ set hlsearch
 set modeline
 set hidden
 
-
 " display settings
 set number
 set background=dark
