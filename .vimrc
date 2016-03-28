@@ -13,15 +13,13 @@ set colorcolumn=80
 colo desert
 nnoremap gp `[v`]
 
-
-" Show trailing whitepace
-highlight TrailingWhitespace ctermbg=darkgreen guibg=darkgreen
-autocmd Syntax * syn match TrailingWhitespace /\s\+$/ containedin=ALL
-
-
 " Filetype and filetype-specific settings
 syntax on
 filetype plugin on
+
+" Show trailing whitepace
+autocmd Syntax * syn match TrailingWhitespace /\s\+$/ containedin=ALL
+highlight TrailingWhitespace ctermbg=darkgreen guibg=darkgreen
 
 function SetupWebstuff()
 	setlocal expandtab
