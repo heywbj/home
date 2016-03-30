@@ -1,0 +1,3 @@
+xterm*locale: true
+xterm*metaSendsEscape: true
+xterm*saveLines: 4096
