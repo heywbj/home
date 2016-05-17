@@ -7,10 +7,13 @@ set modeline
 set hidden
 
 " display settings
-set number
-set background=dark
-set colorcolumn=80
 colo desert
+set background=light
+set number
+set relativenumber
+set colorcolumn=80
+
+" Keyboard shortcuts
 nnoremap gp `[v`]
 
 " Filetype and filetype-specific settings
