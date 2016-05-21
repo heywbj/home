@@ -1,5 +1,7 @@
 [user]
 	name = Warren Jin
 	email = jinwarren@gmail.com
+[credential]
+	helper = cache
 [core]
 	editor = vim
