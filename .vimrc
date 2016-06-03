@@ -7,8 +7,6 @@ set modeline
 set hidden
 
 " display settings
-colo desert
-set background=light
 set number
 set relativenumber
 set colorcolumn=80
